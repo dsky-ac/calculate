@@ -129,8 +129,8 @@ function getRpcUrl(chainId) {
 
 // calaute xmdx
 async function calBalance() {
-  console.log
-  await getBanalce(56)
-  await getBanalce(128)
+  console.log(process.env)
+  // await getBanalce(56)
+  // await getBanalce(128)
 }
 calBalance()
