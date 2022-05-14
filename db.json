@@ -1,0 +1,20 @@
+{
+  "bsc": {
+    "exchange": {
+      "binance": {},
+      "huobi": {}
+    },
+    "destoryXmdx": 0,
+    "mdxSupply": 0,
+    "markblock": 0
+  },
+  "heco": {
+    "exchange": {
+      "binance": {},
+      "huobi": {}
+    },
+    "destoryXmdx": 0,
+    "mdxSupply": 0,
+    "markblock": 0
+  }
+}
