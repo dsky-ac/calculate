@@ -25,6 +25,8 @@ async function getBanalce(chainId) {
     mdxTotal += Number(ethers.utils.formatUnits(mdxbalance, 18));
     xmdxTotal += Number(ethers.utils.formatUnits(xmdxbalance, 18));
   }
+  const mdxSupply = await mdxContract['totalSupply']();
+  console.log(`On ${chainName}, MDX totalSupply is ${ethers.utils.formatUnits(mdxSupply, 18)}`)
   console.log(`On ${chainName}, MDX in blackhole is ${mdxTotal}, xmdx in blackhole is ${xmdxTotal}`)
   await getExData(mdxContract, xmdxContract, chainName);
   await getLockData(chainId, chainName, provider, mdxContract, xmdxContract);
