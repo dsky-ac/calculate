@@ -63,8 +63,9 @@ const CONTRACT_ADDRESS = {
     '0x9c65ab58d8d978db963e63f2bfb7121627e3a739': 'MDX_ADDRESS',
     '0xf6a8291c34b3cce997144e276f3c975b862d7873': 'XMDX_ADDRESS',
     '0xc48fe252aa631017df253578b1405ea399728a50': 'mdex pool',
-    '0x782395303692abed877d2737aa7982345eb44c11': 'swapMining',
-    '0xaFb8C759b018780e5e36F48004177edf3ce6AAe5': 'controller',
+    '0x782395303692abed877d2737aa7982345eb44c11': 'mdex swapMining',
+    '0xaFb8C759b018780e5e36F48004177edf3ce6AAe5': 'mdex controller',
+    '0x6ba7d75ec6576f88a10be832c56f0f27dc040ddd': 'Coinwind gunPool'
   },
   128: {
     '0xBFff969A85e355eE0851b019Dba1e87C7780F40d': 'HBTC/WHT LP',
@@ -128,7 +129,8 @@ const MDX_LPS = {
     '0x223740a259e461abee12d84a9fff5da69ff071dd': 'MDX / BUSD LP',
     '0xaf9aa53146c5752bf6068a84b970e9fbb22a87bc': 'MDX / WBNB LP',
     '0x6849026e570eb5d3404a5c9611f85beaa9fdc019': 'MDX / XMDX LP',
-    '0xe1cbe92b5375ee6afe1b22b555d257b4357f6c68': 'USDT / MDX LP'
+    '0xe1cbe92b5375ee6afe1b22b555d257b4357f6c68': 'USDT / MDX LP',
+    '0x5E23fADEE9d8b5689F89104f10118C956Df3a286': 'HMDX / MDX LP'
   },
   128: {
     '0x615e6285c5944540fd8bd921c9c8c56739fd1e13': 'USDT / MDX LP'
