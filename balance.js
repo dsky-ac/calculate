@@ -3,7 +3,7 @@ require('dotenv').config();
 const { ethers } = require("ethers");
 
 //
-const { MDX_ADDRESS, XMDX_ADDRESS, BLACK_ADDRESS, CHAIN_NAMES, EXCHANGE_ADDRESS, LOCK_ADDRESS, BORDARROOM_ADDRESS, CONTRACT_ADDRESS, MDX_LPS } = require('./config')
+const { MDX_ADDRESS, XMDX_ADDRESS, BLACK_ADDRESS, CHAIN_NAMES, EXCHANGE_ADDRESS, LOCK_ADDRESS, BORDARROOM_ADDRESS, CONTRACT_ADDRESS, MDX_LPS, THIRD_PART } = require('./config')
 const erc20Abi = require('./abi/erc20.json')
 const lockupAbi = require('./abi/lockup.json')
 const masterchefAbi = require('./abi/masterchef.json')
@@ -30,9 +30,10 @@ async function getBanalce(chainId) {
   console.log(`On ${chainName}, MDX in blackhole is ${mdxTotal}, xmdx in blackhole is ${xmdxTotal}`)
   await getExData(mdxContract, xmdxContract, chainName);
   await getLockData(chainId, chainName, provider, mdxContract, xmdxContract);
-  await getBorderRoomValue(chainId, chainName, provider, mdxContract, xmdxContract);
+  await getBorderRoomValue(chainId, chainName, mdxContract, xmdxContract);
   await getMdxInContrct(chainId, chainName, mdxContract, xmdxContract);
   await getMdxInLp(chainId, chainName, mdxContract, xmdxContract);
+  await getThirdPart(chainName, mdxContract, xmdxContract);
 }
 
 async function getMdxInLp(chainId, chainName, mdxContract, xmdxContract) {
@@ -101,7 +102,7 @@ async function getLockData(chainId, chainName, provider, mdxContract, xmdxContra
   console.log(`On ${chainName} More MDX in lockContract is ${ethers.utils.formatUnits(mdxbalance, 18) - mdxInLock}, More XMDX in lockContract is ${ethers.utils.formatUnits(xmdxbalance, 18)}`)
 }
 
-async function getBorderRoomValue(chainId, chainName, provider, mdxContract, xmdxContract) {
+async function getBorderRoomValue(chainId, chainName, mdxContract, xmdxContract) {
   const rooms = BORDARROOM_ADDRESS[chainId];
   const keys = Object.keys(rooms);
   let mdxInRoom = 0;
@@ -118,6 +119,15 @@ async function getBorderRoomValue(chainId, chainName, provider, mdxContract, xmd
     }
   }
   console.log(`On ${chainName} MDX in BorderRoom is ${mdxInRoom}, More XMDX in BorderRoom is ${xmdxInRoom}`)
+}
+
+async function getThirdPart(chainName, mdxContract, xmdxContract) {
+  const address = Object.keys(THIRD_PART);
+  for(const addr of address) {
+    const mdxbalance = await mdxContract['balanceOf'](addr);
+    const xmdxbalance = await xmdxContract['balanceOf'](addr);
+    console.log(`On ${chainName}, In ${THIRD_PART[addr]} MDX balance is ${ethers.utils.formatUnits(mdxbalance, 18)}, XMDX balance is ${ethers.utils.formatUnits(xmdxbalance, 18)}`);
+  }
 }
 
 function getRpcUrl(chainId) {

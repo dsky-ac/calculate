@@ -132,6 +132,10 @@ const MDX_LPS = {
   }
 }
 
+const THIRD_PART = {
+  '0x6ba7d75ec6576f88a10be832c56f0f27dc040ddd': 'Coinwind gunPool'
+}
+
 module.exports = {
   EXCHANGE_ADDRESS,
   MDX_ADDRESS,
@@ -141,5 +145,6 @@ module.exports = {
   LOCK_ADDRESS,
   BORDARROOM_ADDRESS,
   CONTRACT_ADDRESS,
-  MDX_LPS
+  MDX_LPS,
+  THIRD_PART
 }
