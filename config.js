@@ -127,6 +127,8 @@ const MDX_LPS = {
     '0x6849026e570eb5d3404a5c9611f85beaa9fdc019': 'MDX / XMDX LP',
     '0xe1cbe92b5375ee6afe1b22b555d257b4357f6c68': 'USDT / MDX LP',
     '0x5E23fADEE9d8b5689F89104f10118C956Df3a286': 'HMDX / MDX LP',
+    '0xba68d6bee4f433630dee22c248a236c8f6eae246': 'ETH / MDX LP',
+    '0xe24cab13128352572d68ae4da1abe73d5acd820e': 'COW / MDX LP',
     '0xc48fe252aa631017df253578b1405ea399728a50': 'mdex pool',
     '0x782395303692abed877d2737aa7982345eb44c11': 'mdex swapMining',
     '0xaFb8C759b018780e5e36F48004177edf3ce6AAe5': 'mdex controller'
