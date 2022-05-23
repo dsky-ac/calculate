@@ -129,7 +129,7 @@ const MDX_LPS = {
     '0x5E23fADEE9d8b5689F89104f10118C956Df3a286': 'HMDX / MDX LP',
     '0xc48fe252aa631017df253578b1405ea399728a50': 'mdex pool',
     '0x782395303692abed877d2737aa7982345eb44c11': 'mdex swapMining',
-    '0xaFb8C759b018780e5e36F48004177edf3ce6AAe5': 'mdex controller',
+    '0xaFb8C759b018780e5e36F48004177edf3ce6AAe5': 'mdex controller'
   },
   128: {
     '0x615e6285c5944540fd8bd921c9c8c56739fd1e13': 'USDT / MDX LP'
@@ -137,7 +137,7 @@ const MDX_LPS = {
 }
 
 const THIRD_PART = {
-  '0x6ba7d75ec6576f88a10be832c56f0f27dc040ddd': 'Coinwind gunPool'
+  '0x6ba7d75ec6576f88a10be832c56f0f27dc040ddd': 'Coinwind gunPool',
   '0xef97F1d5551373c6a04dbEEc2c04c5D620E8c0cc': 'GIBX LP Pool'
 }
 
