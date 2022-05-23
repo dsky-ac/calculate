@@ -138,6 +138,7 @@ const MDX_LPS = {
 
 const THIRD_PART = {
   '0x6ba7d75ec6576f88a10be832c56f0f27dc040ddd': 'Coinwind gunPool'
+  '0xef97F1d5551373c6a04dbEEc2c04c5D620E8c0cc': 'GIBX LP Pool'
 }
 
 module.exports = {
